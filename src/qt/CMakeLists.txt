@@ -21,6 +21,7 @@ qt_add_resources(QT_RESOURCES
 
 add_subdirectory(uicomponents)
 add_subdirectory(uithemes)
+add_subdirectory(numeric-formats)
 
 set(QT_TRANSLATION_SOURCES
    translations/de.ts
@@ -56,6 +57,7 @@ audacity_qml_module(
       QtQuick
       Audacity.UiComponents
       Audacity.UiThemes
+      Audacity.NumericFormats
 	QML_FILES
 		${QML_SOURCES}
    SOURCES
@@ -68,8 +70,11 @@ audacity_qml_module(
       KDAB::kddockwidgets
       uicomponentsplugin
       uithemesplugin
+      numeric-formatsplugin
       lib-qt-init
       lib-project
+      lib-audio-io
+      lib-numeric-formats
 )
 
 set_target_properties(
